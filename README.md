@@ -40,6 +40,9 @@ export default function App() {
           version: '1.0.0', // app local version
           iosStoreURL: 'ios app store url',
           androidStoreURL: 'android app store url',
+          // Links allowed for android : 
+          // https://play.google.com/store/apps/details?id=xxx.xxx.xxx
+          // market://details?id=xxx.xxx.xxx
           country: 'jp', // default value is 'jp'
         });
 
