@@ -35,6 +35,10 @@ const checkVersion = async (params) => {
         }
         throw new Error(`can't get ${Platform.OS} version`);
     }
+    // Format remote version to remove build number, causing error in compareVersions function
+    // No need for local version (no build number)
+    // Example: from 2.0.8 (3) => 2.0.8
+    remoteVersion =  remoteVersion.replace(/\s*\(.*?\)$/, '')
     const result = compareVersion(params.version, remoteVersion);
     let detail;
     switch (result) {
