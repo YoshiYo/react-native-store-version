@@ -1,5 +1,5 @@
 export const getIOSVersion = async (storeURL = '', country = 'jp') => {
-  const appID = storeURL.match(/.+id([0-9]+)\??/);
+  const appID = storeURL.match(/.+id\(?([0-9]+)\)?\??/);
 
   if (!appID) {
     throw new Error('iosStoreURL is invalid.');
